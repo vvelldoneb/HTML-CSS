@@ -1,130 +1,185 @@
-p1{
-    color: black;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-body{
-    text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body, h1, h3, p, ul, li {
     margin: 0;
-    font-family: sans-serif;
-    background: #f2f2f2;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
 }
-h3{
-    text-align: center;
-    font-size: 30px;
-    margin:0;
-    padding-top: 10px;
+
+/* General styling */
+body {
+    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
 }
-a{
+
+nav {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: black;
     text-decoration: none;
 }
-.gallery{
+
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
 }
-.content{
-    width: 20%;
-    margin: 15px;
+
+.content {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 2rem);
     box-sizing: border-box;
-    float: left;
     text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-    0 10px 10px rgba(0,0,0,0.22);
-    transition: .4s;
-    background: #f2f2f2;
 }
-.content:hover{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
-    0 3px 6px rgba(0,0,0,0.23);
-    transform: translate(0px, -8px);
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
-img{
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-}
-p{
-    text-align: center;
-    color: #b2bec3;
-    padding-top: 0 8px;
-}
-h6{
-    font-size: 26px;
-    text-align: center;
-    color: #222f3e;
-    margin:0;
-}
-ul{
-    list-style: symbols(none);
+
+.rating {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0;
-    color:darksalmon;
-    text-align: center;
+    margin: 0.5rem 0;
 }
-.li{
-    padding: 5px;
+
+.rating i {
+    color: gold;
+    margin: 0 0.1rem;
 }
-.fa{
-    font-size: 26px;
-    transition: .4s;
-    margin: 3px;
+
+.buy-button {
+    background-color: pink;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.checked{
-    color: orange;
+
+.buy-button:hover {
+    background-color: pink;
 }
-.fa:hover{
-    transform: scale(1.3);
-    transition: .6s;
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
 }
-button{
-    text-align: center;
-    font-size: 24px;
+
+.navbar a {
+    float: left;
+    display: block;
     color: #f2f2f2;
-    width: 100%;
-    padding: 15px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.buy-1{
-    background:pink;
-}
-.buy-2{
-    background:pink;
-}
-.buy-3{
-    background:pink;
-}
-.buy-4{
-    background:pink;
-}
-@media only screen and (min-width : 320px) {
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+.section-container {
+    display: flex;
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+/* Form Container */
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: pink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: palevioletred;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        width: calc(100% - 2rem);
+    }
 }
